@@ -1,11 +1,9 @@
-import React from 'react';
 import { 
   Box, 
   Typography, 
   Container, 
   Grid, 
   Paper, 
-  Avatar,
   useTheme,
   useMediaQuery
 } from '@mui/material';
@@ -242,7 +240,6 @@ const AccentBottom = styled(Box)(({ theme }) => ({
 const AboutMe = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
 
   const skills = [
     "Passionate Full-Stack Developer",

@@ -1,9 +1,6 @@
 import { CssBaseline, Box } from "@mui/material";
 import "./App.css";
-import Header from "./components/header";
-import Hero from "./components/hero";
 import { MainLayout } from "./layouts/mainlayout";
-import CustomCursor from "./components/custom-cursour";
 
 function App() {
   return (

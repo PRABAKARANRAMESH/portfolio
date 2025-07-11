@@ -18,23 +18,16 @@ import {
   Send,
   User,
   Mail,
-  MessageSquare,
   Github,
   Linkedin,
   Mail as MailIcon,
   MapPin,
-  Phone,
   Globe,
   Heart,
   Code,
   Lightbulb,
   Target,
-  Home,
-  Info,
-  FolderOpen,
-  GraduationCap,
   Rocket,
-  ArrowRight
 } from 'lucide-react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
@@ -104,7 +97,7 @@ const TitleContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
-const MainCard = styled(Paper)(({ theme }) => ({
+const MainCard = styled(Paper)(() => ({
   backgroundColor: 'rgba(30, 41, 59, 0.9)',
   backdropFilter: 'blur(20px)',
   border: '1px solid rgba(71, 85, 105, 0.4)',
@@ -444,32 +437,32 @@ const FooterDescription = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const QuickLinkItem = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  gap: theme.spacing(1.5),
-  padding: theme.spacing(1, 0),
-  color: '#94a3b8',
-  fontSize: '0.9375rem',
-  cursor: 'pointer',
-  transition: 'all 0.3s ease',
-  position: 'relative',
-  zIndex: 2,
-  '&:hover': {
-    color: '#ffffff',
-    paddingLeft: theme.spacing(1),
-    '& svg': {
-      transform: 'translateX(3px)',
-    },
-  },
-  '& svg': {
-    transition: 'transform 0.3s ease',
-  },
-  [theme.breakpoints.up('sm')]: {
-    fontSize: '1rem',
-    gap: theme.spacing(2),
-  },
-}));
+// const QuickLinkItem = styled(Box)(({ theme }) => ({
+//   display: 'flex',
+//   alignItems: 'center',
+//   gap: theme.spacing(1.5),
+//   padding: theme.spacing(1, 0),
+//   color: '#94a3b8',
+//   fontSize: '0.9375rem',
+//   cursor: 'pointer',
+//   transition: 'all 0.3s ease',
+//   position: 'relative',
+//   zIndex: 2,
+//   '&:hover': {
+//     color: '#ffffff',
+//     paddingLeft: theme.spacing(1),
+//     '& svg': {
+//       transform: 'translateX(3px)',
+//     },
+//   },
+//   '& svg': {
+//     transition: 'transform 0.3s ease',
+//   },
+//   [theme.breakpoints.up('sm')]: {
+//     fontSize: '1rem',
+//     gap: theme.spacing(2),
+//   },
+// }));
 
 const ContactInfoItem = styled(Box)(({ theme }) => ({
   display: 'flex',

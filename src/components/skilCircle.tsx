@@ -336,7 +336,6 @@ import {
   Typography,
   ThemeProvider,
   createTheme,
-  CssBaseline,
 } from '@mui/material';
 import { styled, keyframes } from '@mui/system';
 
@@ -386,7 +385,7 @@ const rotateAntiClockwise = keyframes`
   to { transform: rotate(-360deg); }
 `;
 
-const OuterCircle = styled(Box)(({ theme }) => ({
+const OuterCircle = styled(Box)(() => ({
   width: 'min(90vw, 500px)',
   height: 'min(90vw, 500px)',
   borderRadius: '50%',
@@ -399,7 +398,7 @@ const OuterCircle = styled(Box)(({ theme }) => ({
   m:  2,
 }));
 
-const InnerCircle = styled(Box)(({ theme }) => ({
+const InnerCircle = styled(Box)(() => ({
   width: 'min(50vw, 300px)',
   height: 'min(50vw, 300px)',
   borderRadius: '50%',
@@ -411,7 +410,7 @@ const InnerCircle = styled(Box)(({ theme }) => ({
   animation: `${rotateAntiClockwise} 20s linear infinite`,
 }));
 
-const SkillsText = styled(Typography)(({ theme }) => ({
+const SkillsText = styled(Typography)(() => ({
   fontSize: 'clamp(2rem, 5vw, 4rem)',
   fontWeight: 'bold',
   color: 'white',

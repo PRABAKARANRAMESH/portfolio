@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Grid,
@@ -23,7 +22,7 @@ const rotate = keyframes`
 `;
 
 // Outer wrapper with rotating gradient border
-const RotatingGradientBorder = styled(Box)(({ theme }) => ({
+const RotatingGradientBorder = styled(Box)(() => ({
   position: "relative",
   borderRadius: "16px",
   padding: "2px",
@@ -51,7 +50,7 @@ const RotatingGradientBorder = styled(Box)(({ theme }) => ({
 }));
 
 // Inner card (non-rotating)
-const InnerCard = styled(Card)(({ theme }) => ({
+const InnerCard = styled(Card)(() => ({
   backgroundColor: "#0F111A",
   color: "#ffffff",
   borderRadius: "16px",

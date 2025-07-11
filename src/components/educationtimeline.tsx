@@ -582,7 +582,7 @@ const Description = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const SubjectsContainer = styled(Box)(({ theme }) => ({
+const SubjectsContainer = styled(Box)(() => ({
   position: 'relative',
   zIndex: 2,
 }));
@@ -703,7 +703,7 @@ const Education = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const isSmallTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  // const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   const educationData = [
     {
@@ -895,7 +895,7 @@ const Education = () => {
 
         {/* Enhanced Timeline */}
         <TimelineContainer>
-          {educationData.reverse().map((education, index) => {
+          {educationData.reverse().map((education) => {
             const IconComponent = education.icon;
             return (
               <TimelineItem key={education.id}>
