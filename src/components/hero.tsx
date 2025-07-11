@@ -6,6 +6,14 @@ import CodeIcon from "@mui/icons-material/Code";
 import SkillsDisplay from "./skilCircle";
 
 const Hero = ({ onContactClick }: { onContactClick: () => void }) => {
+
+
+    const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "resume.pdf";
+    link.download = "PrabakaranRamesh_Resume.pdf";
+    link.click();
+  };
   return (
     <Box
       sx={{
@@ -63,6 +71,7 @@ const Hero = ({ onContactClick }: { onContactClick: () => void }) => {
           <Button
             variant="outlined"
             sx={{ color: "white", borderColor: "white" }}
+            onClick={handleDownload}
           >
             My Resume ⬇
           </Button>
