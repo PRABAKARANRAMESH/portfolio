@@ -340,13 +340,13 @@ import {
 import { styled, keyframes } from '@mui/system';
 
 import {
-  FaJsSquare, FaReact, FaAws, FaDocker, FaLinux,
-  FaGithub, FaNodeJs, FaPencilAlt, FaGitAlt,FaHtml5, FaCss3Alt, FaBootstrap
+  FaJsSquare, FaReact,
+  FaGithub, FaNodeJs,  FaGitAlt,FaHtml5, FaCss3Alt, FaBootstrap
 } from 'react-icons/fa';
 import { FaPython } from 'react-icons/fa';
 
 import {
-  SiMongodb, SiMysql, SiDjango, SiExpress, SiCanva, SiRedux, SiMui, SiTypescript, SiFastapi,SiNextdotjs
+   SiMysql, SiCanva, SiRedux, SiMui, SiTypescript, SiFastapi,SiNextdotjs
 } from 'react-icons/si';
 
 interface Skill {
