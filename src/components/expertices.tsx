@@ -7,21 +7,20 @@ import {
 } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 
-// React icons
-import { FaReact, FaNodeJs, FaAws, FaGithub, FaDocker } from "react-icons/fa";
-import { SiNextdotjs, SiMongodb, SiSpringboot } from "react-icons/si";
+import {
+  FaReact, FaNodeJs, FaGithub, FaHtml5, FaCss3Alt, FaJsSquare
+} from "react-icons/fa";
+import {
+  SiNextdotjs, SiFastapi, SiTypescript, SiRedux, SiGitlab,
+  SiFigma, SiPostman, SiSwagger
+} from "react-icons/si";
 
-// Keyframe for rotating border layer only
+// Rotating border animation
 const rotate = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 `;
 
-// Outer wrapper with rotating gradient border
 const RotatingGradientBorder = styled(Box)(() => ({
   position: "relative",
   borderRadius: "16px",
@@ -49,7 +48,6 @@ const RotatingGradientBorder = styled(Box)(() => ({
   },
 }));
 
-// Inner card (non-rotating)
 const InnerCard = styled(Card)(() => ({
   backgroundColor: "#0F111A",
   color: "#ffffff",
@@ -62,13 +60,11 @@ const InnerCard = styled(Card)(() => ({
   },
 }));
 
-// Icon style
 const IconBox = styled(Box)({
   fontSize: "48px",
   marginBottom: "16px",
 });
 
-// Title gradient
 const GradientTitle = styled(Typography)({
   fontWeight: 700,
   fontSize: "32px",
@@ -79,47 +75,81 @@ const GradientTitle = styled(Typography)({
   marginBottom: "8px",
 });
 
-// Skills list
-const skills = [
+// Skills Section
+const skillItems = [
   {
     icon: <FaReact color="#61DBFB" />,
     title: "React.js",
-    description: "Frontend and User-Interface Development.",
+    description: "Frontend UI Development with components.",
   },
   {
     icon: <SiNextdotjs color="#FFFFFF" />,
     title: "Next.js",
-    description: "Frontend Development.",
+    description: "Production-grade React framework.",
   },
   {
     icon: <FaNodeJs color="#3C873A" />,
     title: "Node.js & Express.js",
-    description: "Backend API Development.",
+    description: "Backend REST APIs and Services.",
   },
   {
-    icon: <FaAws color="#FF9900" />,
-    title: "AWS",
-    description: "Cloud Hosting & Deployment.",
+    icon: <SiFastapi color="#009688" />,
+    title: "FastAPI",
+    description: "High-performance Python API backend.",
   },
   {
-    icon: <SiMongodb color="#4DB33D" />,
-    title: "MongoDB",
-    description: "Backend API Database Management.",
+    icon: <FaJsSquare color="#F7DF1E" />,
+    title: "JavaScript",
+    description: "Dynamic logic for the web.",
   },
+  {
+    icon: <SiTypescript color="#3178C6" />,
+    title: "TypeScript",
+    description: "Typed JavaScript for scalable apps.",
+  },
+  {
+    icon: <FaHtml5 color="#E44D26" />,
+    title: "HTML5",
+    description: "Semantic structure for the web.",
+  },
+  {
+    icon: <FaCss3Alt color="#1572B6" />,
+    title: "CSS3",
+    description: "Responsive, styled user interfaces.",
+  },
+  {
+    icon: <SiRedux color="#764ABC" />,
+    title: "Redux",
+    description: "State management for React apps.",
+  },
+];
+
+// Tools Section
+const toolItems = [
   {
     icon: <FaGithub color="#FFFFFF" />,
     title: "GitHub",
-    description: "Version Control & CI/CD.",
+    description: "Code hosting and collaboration.",
   },
   {
-    icon: <SiSpringboot color="#6DB33F" />,
-    title: "Spring Boot",
-    description: "Java-based Backend Development.",
+    icon: <SiGitlab color="#FC6D26" />,
+    title: "GitLab",
+    description: "CI/CD & repo management.",
   },
   {
-    icon: <FaDocker color="#0db7ed" />,
-    title: "Docker & Kubernetes",
-    description: "Containerized Scalable Deployment.",
+    icon: <SiFigma color="#F24E1E" />,
+    title: "Figma",
+    description: "Design and UI prototyping.",
+  },
+  {
+    icon: <SiPostman color="#FF6C37" />,
+    title: "Postman",
+    description: "API testing and debugging.",
+  },
+  {
+    icon: <SiSwagger color="#85EA2D" />,
+    title: "Swagger",
+    description: "API documentation and testing.",
   },
 ];
 
@@ -127,7 +157,6 @@ const ExpertiseSection = () => {
   return (
     <Box
       sx={{
-        // backgroundColor: "#0B0F1A",
         padding: "60px 20px",
         minHeight: "100vh",
         color: "#fff",
@@ -136,12 +165,16 @@ const ExpertiseSection = () => {
     >
       <GradientTitle>Expertise</GradientTitle>
       <Typography variant="subtitle1" sx={{ mb: 6 }}>
-        Turning Ideas into Impact with These Skills.
+        Turning Ideas into Impact with These Skills & Tools.
       </Typography>
 
+      {/* Skills Section */}
+      <Typography variant="h5" sx={{ mb: 4, fontWeight: 600, color: "#38BDF8" }}>
+        Skills
+      </Typography>
       <Grid container spacing={4} justifyContent="center">
-        {skills.map((skill, index) => (
-          <Grid size={{xs:12,sm:6, md:4,lg:3}} key={index} >
+        {skillItems.map((skill, index) => (
+          <Grid size={{xs: 12, sm: 6, md: 4, lg: 3}} key={index}>
             <RotatingGradientBorder>
               <InnerCard elevation={0}>
                 <CardContent>
@@ -150,6 +183,28 @@ const ExpertiseSection = () => {
                     {skill.title}
                   </Typography>
                   <Typography variant="body2">{skill.description}</Typography>
+                </CardContent>
+              </InnerCard>
+            </RotatingGradientBorder>
+          </Grid>
+        ))}
+      </Grid>
+
+      {/* Tools Section */}
+      <Typography variant="h5" sx={{ mt: 10, mb: 4, fontWeight: 600, color: "#A78BFA" }}>
+        Tools
+      </Typography>
+      <Grid container spacing={4} justifyContent="center">
+        {toolItems.map((tool, index) => (
+          <Grid size={{xs: 12, sm: 6, md: 4, lg: 3}}  key={index}>
+            <RotatingGradientBorder>
+              <InnerCard elevation={0}>
+                <CardContent>
+                  <IconBox>{tool.icon}</IconBox>
+                  <Typography variant="h6" gutterBottom>
+                    {tool.title}
+                  </Typography>
+                  <Typography variant="body2">{tool.description}</Typography>
                 </CardContent>
               </InnerCard>
             </RotatingGradientBorder>

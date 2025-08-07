@@ -341,11 +341,12 @@ import { styled, keyframes } from '@mui/system';
 
 import {
   FaJsSquare, FaReact, FaAws, FaDocker, FaLinux,
-  FaGithub, FaNodeJs, FaPencilAlt, FaGitAlt
+  FaGithub, FaNodeJs, FaPencilAlt, FaGitAlt,FaHtml5, FaCss3Alt, FaBootstrap
 } from 'react-icons/fa';
+import { FaPython } from 'react-icons/fa';
 
 import {
-  SiMongodb, SiMysql, SiDjango, SiExpress, SiKubernetes, SiCanva
+  SiMongodb, SiMysql, SiDjango, SiExpress, SiCanva, SiRedux, SiMui, SiTypescript, SiFastapi,SiNextdotjs
 } from 'react-icons/si';
 
 interface Skill {
@@ -355,25 +356,27 @@ interface Skill {
 }
 
 const innerCircleSkills: Skill[] = [
+  { icon: FaHtml5, color: '#E44D26', name: 'HTML5' },
+  { icon: FaCss3Alt, color: '#1572B6', name: 'CSS3' },
   { icon: FaJsSquare, color: '#F7DF1E', name: 'JavaScript' },
-  { icon: FaReact, color: '#61DAFB', name: 'React' },
-  { icon: FaDocker, color: '#2496ED', name: 'Docker' },
-  { icon: FaLinux, color: '#FCC624', name: 'Linux' },
-  { icon: SiExpress, color: '#FFFFFF', name: 'Express.js' },
+  { icon: SiTypescript, color: '#3178C6', name: 'TypeScript' },
+  { icon: FaPython, color: '#3776AB', name: 'Python' },
 ];
 
 const outerCircleSkills: Skill[] = [
-  { icon: SiMongodb, color: '#47A248', name: 'MongoDB' },
-  { icon: FaGithub, color: '#181717', name: 'GitHub' },
-  { icon: SiDjango, color: '#092E20', name: 'Django' },
-  { icon: SiMysql, color: '#4479A1', name: 'MySQL' },
-  { icon: SiCanva, color: '#00C4CC', name: 'Canva' },
-  { icon: FaAws, color: '#FF9900', name: 'AWS' },
+  { icon: FaReact, color: '#61DAFB', name: 'React' },
+  { icon: SiRedux, color: '#764ABC', name: 'Redux' },
+  { icon: SiMui, color: '#007FFF', name: 'Material-UI' },
+  { icon: FaBootstrap, color: '#7952B3', name: 'Bootstrap' },
   { icon: FaNodeJs, color: '#339933', name: 'Node.js' },
-  { icon: SiKubernetes, color: '#326CE5', name: 'PowerApps' },
-  { icon: FaPencilAlt, color: '#A0A0A0', name: 'Pencil' },
-  { icon: FaGitAlt, color: '#F05032', name: 'Git' }
+  { icon: SiFastapi, color: '#009688', name: 'FastAPI' },
+  { icon: SiNextdotjs, color: '#000000', name: 'Next.js' },
+  { icon: SiMysql, color: '#4479A1', name: 'MySQL' },
+  { icon: FaGitAlt, color: '#F05032', name: 'Git' },
+  { icon: FaGithub, color: '#181717', name: 'GitHub' },
+  { icon: SiCanva, color: '#00C4CC', name: 'Canva' },
 ];
+
 
 const rotateClockwise = keyframes`
   from { transform: rotate(0deg); }
@@ -440,6 +443,9 @@ const IconContainer = styled(Box, {
   width: 'clamp(35px, 5vw, 50px)',
   height: 'clamp(35px, 5vw, 50px)',
   borderRadius: '50%',
+  backgroundColor: '#38384bff', // darker background for contrast
+  boxShadow: '0 4px 10px rgba(0,0,0,0.25)',
+  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   border: '1px solid rgba(255, 255, 255, 0.2)',
 }));
 

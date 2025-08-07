@@ -124,9 +124,9 @@ const drawerList = (
     onClick={toggleDrawer(false)}
     onKeyDown={toggleDrawer(false)}
   >
-    <Typography variant="h6" sx={{ mb: 3, px: 1, color: "#A78BFA" }}>
+    {/* <Typography variant="h6" sx={{ mb: 3, px: 1, color: "#A78BFA" }}>
       PRABAKARAN <span style={{ fontSize: 10, color: "#ccc" }}>RAMESH</span>
-    </Typography>
+    </Typography> */}
 
     <List sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
       {navItems.map((text) => (
@@ -197,7 +197,7 @@ const drawerList = (
               <CodeIcon sx={{ color: "white" }} />
             </IconButton>
             <Box>
-              <Typography variant="h6" sx={{ color: "#A78BFA", fontWeight: 700 }}>
+              <Typography variant="h6" sx={{ color: "#f8f8f8ff", fontWeight: 700 }}>
                 PRABAKARAN RAMESH
               </Typography>
               {/* <Typography sx={{ fontSize: 10, color: "#9ca3af" }}>RAMESH</Typography> */}

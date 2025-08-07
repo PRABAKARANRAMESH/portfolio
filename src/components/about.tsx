@@ -11,6 +11,7 @@ import { styled } from '@mui/material/styles';
 import { Zap, Check } from 'lucide-react';
 // import mypic from '../assets/image/cropped_circle_image.png';
 import mypic from '../assets/image/Gemini_Generated_Image_t7xr6wt7xr6wt7xr.png';
+import mypic2 from '../assets/image/myimg_2.jpg';
 
 // Styled components
 const StyledContainer = styled(Box)(({ theme }) => ({
@@ -241,13 +242,14 @@ const AboutMe = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const skills = [
-    "Passionate Full-Stack Developer",
-    "Problem-solver with a love for innovation", 
-    "Building scalable & efficient applications",
-    "Focused on leveraging Cloud technologies for modern, reliable solutions",
-    "Always learning and adapting"
-  ];
+ const skills = [
+  "Strong in React.js, Next.js, JavaScript, HTML, CSS",
+  "Experience with responsive UI design and reusable components",
+  "Proficient with version control using Git and GitHub",
+  "Worked on real-world projects with production-quality code",
+  "Basic knowledge of backend technologies: Node.js, Express, MongoDB, FastAPI",
+  "Currently exploring full-stack development (MERN & FastAPI)",
+];
 
   return (
     <StyledContainer>
@@ -314,7 +316,7 @@ const AboutMe = () => {
                     <Box position="relative" sx={{ width: '100%', height: '100%' }}>
                       <DashedCircle />
                       <ProfileImage
-                        src={mypic}
+                        src={mypic2}
                         alt="Profile"
                         style={{ position: 'relative', zIndex: 2 }}
                       />
@@ -395,17 +397,16 @@ const AboutMe = () => {
               {/* Description Box */}
               <DescriptionPaper elevation={0}>
                 <Typography
-                  sx={{
-                    color: '#d1d5db',
-                    lineHeight: 1.6,
-                    fontSize: { xs: '0.875rem', sm: '1rem', lg: '1.125rem' },
-                  }}
-                >
-                  I'm always curious and eager to learn new things. I enjoy turning 
-                  ideas into solutions and working with others to create something 
-                  meaningful. I believe growth comes from both challenges and 
-                  experience. Let's connect and share ideas—I'd love to hear from you!
-                </Typography>
+  sx={{
+    color: '#d1d5db',
+    lineHeight: 1.6,
+    textAlign: 'justify',
+    fontSize: { xs: '0.875rem', sm: '1rem', lg: '1.125rem' },
+  }}
+>
+  I'm a frontend developer with strong expertise in React.js, Next.js, JavaScript, HTML, and CSS. I specialize in building clean, responsive, and user-friendly interfaces that bring designs to life. Over time, I’ve worked on real-world applications, optimized UI performance, and followed best practices to deliver scalable and maintainable code. I'm also familiar with backend technologies like Node.js, Express, MongoDB, and FastAPI, and I'm actively learning to strengthen my full-stack development skills.
+</Typography>
+
               </DescriptionPaper>
 
               {/* Skills List */}
