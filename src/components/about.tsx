@@ -10,7 +10,7 @@ import {
 import { styled } from '@mui/material/styles';
 import { Zap, Check } from 'lucide-react';
 // import mypic from '../assets/image/cropped_circle_image.png';
-import mypic from '../assets/image/Gemini_Generated_Image_t7xr6wt7xr6wt7xr.png';
+// import mypic from '../assets/image/Gemini_Generated_Image_t7xr6wt7xr6wt7xr.png';
 import mypic2 from '../assets/image/myimg_2.jpg';
 
 // Styled components

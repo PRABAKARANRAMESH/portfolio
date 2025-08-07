@@ -2,7 +2,6 @@ import {
   Box,
   Typography,
   Container,
-  Chip,
   useTheme,
   useMediaQuery,
   CardContent,
@@ -593,121 +592,10 @@ const Description = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const SubjectsContainer = styled(Box)(() => ({
-  position: "relative",
-  zIndex: 2,
-}));
 
-const SubjectsTitle = styled(Typography)(({ theme }) => ({
-  fontWeight: 700,
-  color: "#e2e8f0",
-  marginBottom: theme.spacing(1),
-  textTransform: "uppercase",
-  letterSpacing: "0.05em",
 
-  // Mobile
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "0.75rem",
-    marginBottom: theme.spacing(0.75),
-  },
 
-  [theme.breakpoints.between("sm", "md")]: {
-    fontSize: "0.8125rem",
-    marginBottom: theme.spacing(1),
-  },
 
-  // Tablet and desktop
-  [theme.breakpoints.up("md")]: {
-    fontSize: "0.875rem",
-    marginBottom: theme.spacing(1.25),
-  },
-
-  [theme.breakpoints.up("lg")]: {
-    fontSize: "0.9375rem",
-  },
-}));
-
-const SubjectsGrid = styled(Box)(({ theme }) => ({
-  display: "flex",
-  flexWrap: "wrap",
-  gap: theme.spacing(0.75),
-
-  [theme.breakpoints.up("sm")]: {
-    gap: theme.spacing(1),
-  },
-
-  [theme.breakpoints.up("md")]: {
-    gap: theme.spacing(1.25),
-  },
-}));
-
-const SubjectChip = styled(Chip)(({ theme }) => ({
-  backgroundColor: "rgba(71, 85, 105, 0.4)",
-  color: "#e2e8f0",
-  fontWeight: 600,
-  border: "1px solid rgba(71, 85, 105, 0.3)",
-  transition: "all 0.3s ease",
-
-  "&:hover": {
-    backgroundColor: "rgba(168, 85, 247, 0.25)",
-    borderColor: "rgba(168, 85, 247, 0.5)",
-    color: "#ffffff",
-    transform: "translateY(-2px)",
-    boxShadow: "0 8px 16px rgba(168, 85, 247, 0.2)",
-  },
-
-  // Mobile
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "0.7rem",
-    height: 24,
-  },
-
-  [theme.breakpoints.between("sm", "md")]: {
-    fontSize: "0.75rem",
-    height: 28,
-  },
-
-  // Tablet and desktop
-  [theme.breakpoints.up("md")]: {
-    fontSize: "0.8125rem",
-    height: 32,
-  },
-
-  [theme.breakpoints.up("lg")]: {
-    fontSize: "0.875rem",
-    height: 36,
-  },
-}));
-
-const CGPAHighlight = styled(Box)(({ theme }) => ({
-  display: "inline-flex",
-  alignItems: "center",
-  gap: theme.spacing(0.75),
-  backgroundColor: "rgba(20, 184, 166, 0.15)",
-  border: "1px solid rgba(20, 184, 166, 0.3)",
-  borderRadius: 10,
-  marginTop: theme.spacing(0.75),
-  fontWeight: 600,
-  color: "#14b8a6",
-
-  // Mobile
-  [theme.breakpoints.down("sm")]: {
-    padding: theme.spacing(0.5, 1.25),
-    fontSize: "0.75rem",
-  },
-
-  [theme.breakpoints.between("sm", "md")]: {
-    padding: theme.spacing(0.75, 1.5),
-    fontSize: "0.8125rem",
-  },
-
-  // Tablet and desktop
-  [theme.breakpoints.up("md")]: {
-    padding: theme.spacing(1, 2),
-    fontSize: "0.875rem",
-    gap: theme.spacing(1),
-  },
-}));
 
 const Education = () => {
   const theme = useTheme();
