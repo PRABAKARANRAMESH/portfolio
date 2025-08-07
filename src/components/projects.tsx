@@ -15,14 +15,12 @@ import {
   ExternalLink, 
   Github, 
   Code2,
-  Globe,
-  Server,
   Database,
-  Cloud,
-  Shield,
   Layers
 } from 'lucide-react';
 
+import convexImage from '../assets/image/Convex.png';
+import TixieImage from '../assets/image/Tixie.png';
 const StyledContainer = styled(Box)(({ theme }) => ({
   minHeight: '60vh',
   // background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%)',
@@ -203,6 +201,7 @@ const ProjectDescription = styled(Typography)(({ theme }) => ({
   fontSize: '0.875rem',
   color: '#94a3b8',
   lineHeight: 1.6,
+  textAlign: 'justify',
   marginBottom: theme.spacing(2),
   flex: 1,
   [theme.breakpoints.up('sm')]: {
@@ -273,85 +272,76 @@ const PrimaryButton = styled(ActionButton)({
   },
 });
 
-const SecondaryButton = styled(ActionButton)({
-  backgroundColor: 'transparent',
-  color: '#94a3b8',
-  border: '1px solid rgba(71, 85, 105, 0.5)',
-  '&:hover': {
-    backgroundColor: 'rgba(71, 85, 105, 0.2)',
-    borderColor: 'rgba(168, 85, 247, 0.5)',
-    color: '#ffffff',
-    transform: 'translateY(-2px)',
-  },
-});
+// const SecondaryButton = styled(ActionButton)({
+//   backgroundColor: 'transparent',
+//   color: '#94a3b8',
+//   border: '1px solid rgba(71, 85, 105, 0.5)',
+//   '&:hover': {
+//     backgroundColor: 'rgba(71, 85, 105, 0.2)',
+//     borderColor: 'rgba(168, 85, 247, 0.5)',
+//     color: '#ffffff',
+//     transform: 'translateY(-2px)',
+//   },
+// });
 
 const FeaturedProjects = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const filters = [
     { label: 'All', icon: Layers },
-    { label: 'Full-stack', icon: Code2 },
-    { label: 'Cloud', icon: Cloud },
-    { label: 'DevOps', icon: Server },
-    { label: 'AI', icon: Globe },
-    { label: 'Cyber Security', icon: Shield },
+    { label: 'HEPL', icon: Code2 },
+    { label: 'Hysas', icon: Code2 },
+    { label: 'My Website', icon: Code2 },
     { label: 'Others', icon: Database }
   ];
 
   const projects = [
     {
       id: 1,
-      title: 'Video2Words',
-      description: 'A web application that enables content creators to automatically transcribe and translate their videos, promoting accessibility and global reach.',
+      title: 'Go My Exam (LMS)',
+      description: 'Developed a dynamic Learning Management System (LMS) at Hysas Technologies. This platform enables organizations to create, manage, and track educational content and assessments, supporting multi-tenant architecture and role-based access for admins, faculty, and students.',
       image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: [
-        { name: 'React', icon: Code2 },
-        { name: 'Node.js', icon: Server },
-        { name: 'Express', icon: Server },
-        { name: 'AWS', icon: Cloud },
-        { name: 'Docker', icon: Database },
-        { name: 'Tailwind CSS', icon: Globe }
-      ],
-      category: 'Full-stack',
+      category: 'Hysas',
       liveUrl: '#',
       sourceUrl: '#'
     },
     {
       id: 2,
-      title: 'Vishwas (SIH)',
-      description: 'A contract-based farming platform to ensure transparent agreements, fair pricing, and secure, timely payments for farmers.',
-      image: 'https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: [
-        { name: 'React', icon: Code2 },
-        { name: 'Node.js', icon: Server },
-        { name: 'Express', icon: Server },
-        { name: 'MongoDB', icon: Database },
-        { name: 'Razorpay', icon: Shield },
-        { name: 'CSS', icon: Globe }
-      ],
-      category: 'Full-stack',
+      title: 'Convex (PM Tool)',
+      description: 'Developed Convex at HEPL, a powerful project management tool tailored for handling Projects, Milestones, Tasks, and Subtasks. It facilitates real-time team collaboration, role-based access, deadline tracking, and progress monitoring to enhance organizational productivity.',
+      image: convexImage,
+      category: 'HEPL',
       liveUrl: '#',
       sourceUrl: '#'
     },
     {
       id: 3,
-      title: 'KubeMERN',
-      description: 'A simple Todo application built using the MERN stack, deployed on a Kubernetes-based microservices architecture for scalability and containerized orchestration.',
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: [
-        { name: 'Kubernetes', icon: Cloud },
-        { name: 'Docker', icon: Database },
-        { name: 'GitHub', icon: Code2 },
-        { name: 'React', icon: Code2 },
-        { name: 'Node.js', icon: Server },
-        { name: 'Express', icon: Server },
-        { name: 'MongoDB', icon: Database }
-      ],
-      category: 'DevOps',
+      title: 'TIXIE (Ticketing Tool)',
+      description: 'Built TIXIE, an internal organizational ticketing tool that allows users to raise, assign, and resolve issues across various departments. The platform improves operational efficiency by tracking ticket statuses, priority, and resolution time while ensuring accountability and communication between teams.',
+      image: TixieImage,
+      category: 'HEPL',
       liveUrl: '#',
       sourceUrl: '#'
-    }
+    },
+    // {
+    //   id: 3,
+    //   title: 'KubeMERN',
+    //   description: 'A simple Todo application built using the MERN stack, deployed on a Kubernetes-based microservices architecture for scalability and containerized orchestration.',
+    //   image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   technologies: [
+    //     { name: 'Kubernetes', icon: Cloud },
+    //     { name: 'Docker', icon: Database },
+    //     { name: 'GitHub', icon: Code2 },
+    //     { name: 'React', icon: Code2 },
+    //     { name: 'Node.js', icon: Server },
+    //     { name: 'Express', icon: Server },
+    //     { name: 'MongoDB', icon: Database }
+    //   ],
+    //   category: 'DevOps',
+    //   liveUrl: '#',
+    //   sourceUrl: '#'
+    // }
   ];
   const [activeFilter, setActiveFilter] = useState('All');
 
@@ -402,7 +392,7 @@ const FeaturedProjects = () => {
               marginBottom: 2,
             }}
           >
-            Featured Projects
+             Projects
           </Typography>
           <Typography
             sx={{
@@ -441,12 +431,22 @@ const FeaturedProjects = () => {
           justifyContent="center"
           alignItems="stretch"
         >
-       {projects
-  .filter((project) => {
-    if (activeFilter === 'All') return true;
-    return project.category === activeFilter;
-  })
-  .map((project) => (
+       {projects.filter((project) =>
+    activeFilter === 'All' || project.category === activeFilter
+  ).length === 0 ? (
+    <Grid size={{xs:12}} >
+      <Box sx={{ textAlign: 'center', py: 6 }}>
+        <Typography variant="h6" sx={{ color: '#94a3b8' }}>
+          No projects found for the selected category.
+        </Typography>
+      </Box>
+    </Grid>
+  ) : (
+    projects
+      .filter((project) =>
+        activeFilter === 'All' || project.category === activeFilter
+      )
+      .map((project) => (
             <Grid 
               size={{ xs: 12, sm: 6, md: 4 }} 
               key={project.id}
@@ -462,6 +462,7 @@ const FeaturedProjects = () => {
                   className="project-image"
                   sx={{
                     backgroundImage: `url(${project.image})`,
+                    backgroundSize: 'cover',
                   }}
                 />
                 
@@ -474,7 +475,7 @@ const FeaturedProjects = () => {
                     {project.description}
                   </ProjectDescription>
 
-                  <Box sx={{ marginTop: 'auto' }}>
+                  {/* <Box sx={{ marginTop: 'auto' }}>
                     <Typography
                       sx={{
                         fontSize: '0.875rem',
@@ -514,11 +515,11 @@ const FeaturedProjects = () => {
                         Live Demo
                       </PrimaryButton>
                     </ProjectActions>
-                  </Box>
+                  </Box> */}
                 </ProjectContent>
               </ProjectCard>
             </Grid>
-          ))}
+          )))}
         </Grid>
       </Container>
     </StyledContainer>
