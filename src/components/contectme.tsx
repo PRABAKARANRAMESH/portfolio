@@ -22,7 +22,6 @@ import {
   Linkedin,
   Mail as MailIcon,
   MapPin,
-  Globe,
   Heart,
   Code,
   Lightbulb,
@@ -34,7 +33,6 @@ import * as Yup from 'yup';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import InstagramIcon from '@mui/icons-material/Instagram';
 
 // Animation keyframes
 const float = keyframes`
@@ -904,11 +902,29 @@ const handleSubmit = (values: any, { setSubmitting, resetForm }: any) => {
                     <FooterTitle>Contact Info</FooterTitle>
                     <ContactInfoItem>
                       <MailIcon size={16} color="#f59e0b" />
-                      <Typography component="span" sx={{cursor:"pointer"}}>prabakaranramesh62@gmail.com</Typography>
+                      <Typography  variant="body2"
+    component="a"
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=prabakaranramesh62@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{
+      color: "inherit",
+      textDecoration: "none",
+      "&:hover": { textDecoration: "underline" },
+    }}>prabakaranramesh62@gmail.com</Typography>
                     </ContactInfoItem>
                     <ContactInfoItem>
                       <MapPin size={16} color="#f59e0b" />
-                      <Typography component="span" sx={{cursor:"pointer"}}>Villupuram, Tamil Nadu, India-605108</Typography>
+                      <Typography variant="body2"
+    component="a"
+    href="https://maps.app.goo.gl/13DfsCL55QfW642S8"
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{
+      color: "inherit",
+      textDecoration: "none",
+      "&:hover": { textDecoration: "underline" },
+    }}>Villupuram, Tamil Nadu, India-605108</Typography>
                     </ContactInfoItem>
                     <Box sx={{ display: 'flex', gap: 2, mt: 3, position: 'relative', zIndex: 2 }}>
   <motion.div whileHover={{ scale: 1.1 }}>

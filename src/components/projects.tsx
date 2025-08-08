@@ -6,14 +6,9 @@ import {
   Grid, 
   Paper,
   Chip,
-  Button,
-  useTheme,
-  useMediaQuery
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { 
-  ExternalLink, 
-  Github, 
+import {  
   Code2,
   Database,
   Layers
@@ -213,64 +208,64 @@ const ProjectDescription = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const TechStack = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexWrap: 'wrap',
-  gap: theme.spacing(0.75),
-  marginBottom: theme.spacing(2),
-  [theme.breakpoints.up('sm')]: {
-    gap: theme.spacing(1),
-    marginBottom: theme.spacing(2.5),
-  },
-}));
+// const TechStack = styled(Box)(({ theme }) => ({
+//   display: 'flex',
+//   flexWrap: 'wrap',
+//   gap: theme.spacing(0.75),
+//   marginBottom: theme.spacing(2),
+//   [theme.breakpoints.up('sm')]: {
+//     gap: theme.spacing(1),
+//     marginBottom: theme.spacing(2.5),
+//   },
+// }));
 
-const TechChip = styled(Chip)(({ theme }) => ({
-  backgroundColor: 'rgba(71, 85, 105, 0.3)',
-  color: '#e2e8f0',
-  fontSize: '0.75rem',
-  height: 24,
-  '& .MuiChip-icon': {
-    fontSize: '0.875rem',
-    color: 'inherit',
-  },
-  [theme.breakpoints.up('sm')]: {
-    fontSize: '0.8125rem',
-    height: 28,
-  },
-}));
+// const TechChip = styled(Chip)(({ theme }) => ({
+//   backgroundColor: 'rgba(71, 85, 105, 0.3)',
+//   color: '#e2e8f0',
+//   fontSize: '0.75rem',
+//   height: 24,
+//   '& .MuiChip-icon': {
+//     fontSize: '0.875rem',
+//     color: 'inherit',
+//   },
+//   [theme.breakpoints.up('sm')]: {
+//     fontSize: '0.8125rem',
+//     height: 28,
+//   },
+// }));
 
-const ProjectActions = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  gap: theme.spacing(1),
-  [theme.breakpoints.up('sm')]: {
-    gap: theme.spacing(1.5),
-  },
-}));
+// const ProjectActions = styled(Box)(({ theme }) => ({
+//   display: 'flex',
+//   gap: theme.spacing(1),
+//   [theme.breakpoints.up('sm')]: {
+//     gap: theme.spacing(1.5),
+//   },
+// }));
 
-const ActionButton = styled(Button)(({ theme }) => ({
-  flex: 1,
-  borderRadius: 8,
-  textTransform: 'none',
-  fontWeight: 600,
-  fontSize: '0.875rem',
-  padding: theme.spacing(1, 2),
-  transition: 'all 0.3s ease',
-  [theme.breakpoints.up('sm')]: {
-    fontSize: '0.9375rem',
-    padding: theme.spacing(1.25, 2.5),
-  },
-}));
+// const ActionButton = styled(Button)(({ theme }) => ({
+//   flex: 1,
+//   borderRadius: 8,
+//   textTransform: 'none',
+//   fontWeight: 600,
+//   fontSize: '0.875rem',
+//   padding: theme.spacing(1, 2),
+//   transition: 'all 0.3s ease',
+//   [theme.breakpoints.up('sm')]: {
+//     fontSize: '0.9375rem',
+//     padding: theme.spacing(1.25, 2.5),
+//   },
+// }));
 
-const PrimaryButton = styled(ActionButton)({
-  background: 'linear-gradient(135deg, #a855f7 0%, #06b6d4 100%)',
-  color: 'white',
-  border: 'none',
-  '&:hover': {
-    background: 'linear-gradient(135deg, #9333ea 0%, #0891b2 100%)',
-    transform: 'translateY(-2px)',
-    boxShadow: '0 8px 20px rgba(168, 85, 247, 0.3)',
-  },
-});
+// const PrimaryButton = styled(ActionButton)({
+//   background: 'linear-gradient(135deg, #a855f7 0%, #06b6d4 100%)',
+//   color: 'white',
+//   border: 'none',
+//   '&:hover': {
+//     background: 'linear-gradient(135deg, #9333ea 0%, #0891b2 100%)',
+//     transform: 'translateY(-2px)',
+//     boxShadow: '0 8px 20px rgba(168, 85, 247, 0.3)',
+//   },
+// });
 
 // const SecondaryButton = styled(ActionButton)({
 //   backgroundColor: 'transparent',
@@ -285,7 +280,7 @@ const PrimaryButton = styled(ActionButton)({
 // });
 
 const FeaturedProjects = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
   // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const filters = [
