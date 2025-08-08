@@ -2,7 +2,7 @@ import { Box, Typography, Button, Stack, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-import CodeIcon from "@mui/icons-material/Code";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import SkillsDisplay from "./skilCircle";
 
 const Hero = ({ onContactClick }: { onContactClick: () => void }) => {
@@ -88,17 +88,17 @@ const Hero = ({ onContactClick }: { onContactClick: () => void }) => {
     </Stack>
 
     <Stack direction="row" spacing={2}>
-      <IconButton sx={{ color: "white" }} href="https://github.com/your-profile" target="_blank">
+      <IconButton sx={{ color: "white" }} href="https://github.com/PRABAKARANRAMESH" target="_blank">
         <GitHubIcon />
       </IconButton>
-      <IconButton sx={{ color: "white" }} href="https://linkedin.com/in/your-profile" target="_blank">
+      <IconButton sx={{ color: "white" }} href="https://www.linkedin.com/in/prabakaranramesh" target="_blank">
         <LinkedInIcon />
       </IconButton>
-      <IconButton sx={{ color: "white" }} href="mailto:your.email@example.com">
+      <IconButton sx={{ color: "white" }}  href="https://mail.google.com/mail/?view=cm&fs=1&to=prabakaranramesh62@gmail.com">
         <EmailIcon />
       </IconButton>
-      <IconButton sx={{ color: "white" }} href="https://your-portfolio-site.dev" target="_blank">
-        <CodeIcon />
+      <IconButton sx={{ color: "white" }} href="https://wa.me/+916379370523" target="_blank">
+        <WhatsAppIcon />
       </IconButton>
     </Stack>
   </Box>
