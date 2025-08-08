@@ -627,7 +627,7 @@ const Education = () => {
   month: "short",
   year: "numeric",
 })}`,
-      status: "Completed",
+      status: "Present",
        description:
     "Currently contributing to frontend development using React, MUI, and Redux. Involved in building responsive, scalable UI components and integrating APIs for real-time functionality. Collaborating in an Agile environment with cross-functional teams to deliver production-ready features.",
   icon: Code,
