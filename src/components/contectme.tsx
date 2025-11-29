@@ -22,7 +22,6 @@ import {
   Linkedin,
   Mail as MailIcon,
   MapPin,
-  Globe,
   Heart,
   Code,
   Lightbulb,
@@ -33,7 +32,7 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 // Animation keyframes
 const float = keyframes`
@@ -51,6 +50,7 @@ const gradientBackground = keyframes`
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 `;
+
 
 const StyledContainer = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
@@ -530,8 +530,9 @@ const ContactMe = () => {
   ];
 
 
+
 const handleSubmit = (values: any, { setSubmitting, resetForm }: any) => {
-  const serviceID = 'service_9uvg1zg';
+  const serviceID = 'service_4pergr6';
   const templateID = 'template_pralrun';
   const publicKey = '5N8XWky6p8LBQfNO5';
 
@@ -680,17 +681,72 @@ const handleSubmit = (values: any, { setSubmitting, resetForm }: any) => {
                   <SocialContainer>
                     <motion.div whileHover={{ scale: 1.1 }}>
                       <SocialButton>
-                        <Github size={isMobile ? 20 : 24} />
+                         <IconButton
+      component="a"
+      href="https://github.com/PRABAKARANRAMESH"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        color: '#94a3b8',
+        '&:hover': { color: '#ffffff' },
+        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+        border: '1px solid rgba(71, 85, 105, 0.3)',
+      }}
+    >
+      <Github size={isMobile ? 20 : 24}/>
+    </IconButton>
                       </SocialButton>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.1 }}>
                       <SocialButton>
-                        <Linkedin size={isMobile ? 20 : 24} />
+                        <IconButton
+      component="a"
+      href="https://www.linkedin.com/in/prabakaranramesh"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        color: '#94a3b8',
+        '&:hover': { color: '#ffffff' },
+        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+        border: '1px solid rgba(71, 85, 105, 0.3)',
+      }}
+    >
+      <Linkedin  size={isMobile ? 20 : 24} />
+    </IconButton>
                       </SocialButton>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.1 }}>
                       <SocialButton>
-                        <MailIcon size={isMobile ? 20 : 24} />
+                        <IconButton
+      component="a"
+      href="mailto:prabakaranramesh62@gmail.com"
+      sx={{
+        color: '#94a3b8',
+        '&:hover': { color: '#ffffff' },
+        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+        border: '1px solid rgba(71, 85, 105, 0.3)',
+      }}
+    >
+      <MailIcon size={isMobile ? 20 : 24}/>
+    </IconButton>
+                      </SocialButton>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.1 }}>
+                      <SocialButton>
+                         <IconButton
+      component="a"
+      href="https://wa.me/+916379370523" // Replace with your portfolio or desired site
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        color: '#94a3b8',
+        '&:hover': { color: '#ffffff' },
+        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+        border: '1px solid rgba(71, 85, 105, 0.3)',
+      }}
+    >
+      <WhatsAppIcon sx={{ fontSize: 20 }} />
+    </IconButton>
                       </SocialButton>
                     </motion.div>
                   </SocialContainer>
@@ -846,62 +902,95 @@ const handleSubmit = (values: any, { setSubmitting, resetForm }: any) => {
                     <FooterTitle>Contact Info</FooterTitle>
                     <ContactInfoItem>
                       <MailIcon size={16} color="#f59e0b" />
-                      <Typography component="span" sx={{cursor:"pointer"}}>prabakaranramesh62@gmail.com</Typography>
+                      <Typography  variant="body2"
+    component="a"
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=prabakaranramesh62@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{
+      color: "inherit",
+      textDecoration: "none",
+      "&:hover": { textDecoration: "underline" },
+    }}>prabakaranramesh62@gmail.com</Typography>
                     </ContactInfoItem>
                     <ContactInfoItem>
                       <MapPin size={16} color="#f59e0b" />
-                      <Typography component="span" sx={{cursor:"pointer"}}>Villupuram, Tamil Nadu, India-605108</Typography>
+                      <Typography variant="body2"
+    component="a"
+    href="https://maps.app.goo.gl/13DfsCL55QfW642S8"
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{
+      color: "inherit",
+      textDecoration: "none",
+      "&:hover": { textDecoration: "underline" },
+    }}>Villupuram, Tamil Nadu, India-605108</Typography>
                     </ContactInfoItem>
                     <Box sx={{ display: 'flex', gap: 2, mt: 3, position: 'relative', zIndex: 2 }}>
-                      <motion.div whileHover={{ scale: 1.1 }}>
-                        <IconButton 
-                          sx={{ 
-                            color: '#94a3b8', 
-                            '&:hover': { color: '#ffffff' },
-                            backgroundColor: 'rgba(71, 85, 105, 0.2)',
-                            border: '1px solid rgba(71, 85, 105, 0.3)',
-                          }}
-                        >
-                          <Linkedin size={20} />
-                        </IconButton>
-                      </motion.div>
-                      <motion.div whileHover={{ scale: 1.1 }}>
-                        <IconButton 
-                          sx={{ 
-                            color: '#94a3b8', 
-                            '&:hover': { color: '#ffffff' },
-                            backgroundColor: 'rgba(71, 85, 105, 0.2)',
-                            border: '1px solid rgba(71, 85, 105, 0.3)',
-                          }}
-                        >
-                          <Github size={20} />
-                        </IconButton>
-                      </motion.div>
-                      <motion.div whileHover={{ scale: 1.1 }}>
-                        <IconButton 
-                          sx={{ 
-                            color: '#94a3b8', 
-                            '&:hover': { color: '#ffffff' },
-                            backgroundColor: 'rgba(71, 85, 105, 0.2)',
-                            border: '1px solid rgba(71, 85, 105, 0.3)',
-                          }}
-                        >
-                          <MailIcon size={20} />
-                        </IconButton>
-                      </motion.div>
-                      <motion.div whileHover={{ scale: 1.1 }}>
-                        <IconButton 
-                          sx={{ 
-                            color: '#94a3b8', 
-                            '&:hover': { color: '#ffffff' },
-                            backgroundColor: 'rgba(71, 85, 105, 0.2)',
-                            border: '1px solid rgba(71, 85, 105, 0.3)',
-                          }}
-                        >
-                          <Globe size={20} />
-                        </IconButton>
-                      </motion.div>
-                    </Box>
+  <motion.div whileHover={{ scale: 1.1 }}>
+    <IconButton
+      component="a"
+      href="https://www.linkedin.com/in/prabakaranramesh"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        color: '#94a3b8',
+        '&:hover': { color: '#ffffff' },
+        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+        border: '1px solid rgba(71, 85, 105, 0.3)',
+      }}
+    >
+      <Linkedin size={20} />
+    </IconButton>
+  </motion.div>
+  <motion.div whileHover={{ scale: 1.1 }}>
+    <IconButton
+      component="a"
+      href="https://github.com/PRABAKARANRAMESH"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        color: '#94a3b8',
+        '&:hover': { color: '#ffffff' },
+        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+        border: '1px solid rgba(71, 85, 105, 0.3)',
+      }}
+    >
+      <Github size={20} />
+    </IconButton>
+  </motion.div>
+  <motion.div whileHover={{ scale: 1.1 }}>
+    <IconButton
+      component="a"
+      href="mailto:prabakaranramesh62@gmail.com"
+      sx={{
+        color: '#94a3b8',
+        '&:hover': { color: '#ffffff' },
+        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+        border: '1px solid rgba(71, 85, 105, 0.3)',
+      }}
+    >
+      <MailIcon size={20} />
+    </IconButton>
+  </motion.div>
+  <motion.div whileHover={{ scale: 1.1 }}>
+    <IconButton
+      component="a"
+      href="https://wa.me/+916379370523" // Replace with your portfolio or desired site
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        color: '#94a3b8',
+        '&:hover': { color: '#ffffff' },
+        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+        border: '1px solid rgba(71, 85, 105, 0.3)',
+      }}
+    >
+      <WhatsAppIcon sx={{ fontSize: 20 }} />
+    </IconButton>
+  </motion.div>
+</Box>
+
                   </FooterCard>
                 </motion.div>
               </Grid>
