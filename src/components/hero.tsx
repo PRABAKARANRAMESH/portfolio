@@ -10,7 +10,7 @@ const Hero = ({ onContactClick }: { onContactClick: () => void }) => {
 
     const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "resume.pdf";
+    link.href = "resume1.pdf";
     link.download = "PrabakaranRamesh_Resume.pdf";
     link.click();
   };
